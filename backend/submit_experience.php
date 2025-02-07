@@ -3,7 +3,7 @@
 $servername = "localhost";  // MySQL host (localhost for local)
 $username = "root";         // MySQL username
 $password = "password"; // MySQL password
-$dbname = "your_database";  // Database name
+$dbname = "job_portal";  // Database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
