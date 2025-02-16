@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Redirect to the dashboard
         header('Location: dashboard.php');
+        exit();
     } else {
         echo "Invalid login credentials.";
     }
@@ -31,3 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 }
 ?>
+<form method="POST" action="login.php">
+    <label>Username:</label><input type="text" name="username" required><br><br>
+    <label>Date of Birth:</label><input type="date" name="dob" required><br><br>
+    <button type="submit">Login</button>
+</form>
