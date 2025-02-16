@@ -8,7 +8,7 @@ CREATE TABLE users (
 -- Create the experience table
 CREATE TABLE experience (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,  -- Reference to the users table
+    user_id INT NOT NULL,
     company_name VARCHAR(255),
     job_title VARCHAR(255),
     start_date DATE,
@@ -20,11 +20,12 @@ CREATE TABLE experience (
 -- Create the jobless table
 CREATE TABLE jobless (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,  -- Reference to the users table
+    user_id INT NOT NULL,
     jobless_start_date DATE,
     jobless_end_date DATE,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
 -- Grant permissions to the user for your database
 GRANT ALL PRIVILEGES ON job_portal.* TO 'app_user'@'localhost' IDENTIFIED BY 'password';
 
