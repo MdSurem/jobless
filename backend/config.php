@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "password";
+$username = "root";  // Update for security purposes
+$password = "password"; // Update for security purposes
 $dbname = "job_portal";
 
 // Create connection
